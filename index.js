@@ -111,3 +111,12 @@ function changeGameMode() {
         logo.src = 'images/logo-bonus.svg';
     }
 }
+
+function openCloseModalRules(mode) {
+    let imgModal = gameMode === 'normal' ? 'images/image-rules.svg' : 'images/image-rules-bonus.svg';
+
+    let display = mode === 'open' ? 'flex' : 'none';
+
+    document.getElementById('img-modal-rules').src = imgModal;
+    document.getElementById('main-modal-rules-container').style.display = display;
+}

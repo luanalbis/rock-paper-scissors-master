@@ -310,6 +310,50 @@ body {
     color: #6e6e6eb2;
 }
 
+/* MODAL RULES */
+
+#main-modal-rules-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.308);
+    position: fixed;
+    z-index: 1000;
+}
+
+#modal-container {
+    border-radius: 5px;
+    background-color: white;
+    padding: 30px 30px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#txt-rules {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#txt-rules>button {
+    color: #a8abb3;
+    background-color: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#txt-rules>p {
+    color: #1a2b4b;
+    font-size: 2rem;
+}
+
+
+/* COLORS */
 
 .scissors-color {
     background: linear-gradient(135deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
@@ -547,4 +591,13 @@ body {
         cursor: pointer;
         color: #6e6e6eb2;
     }
+
+    /* MODAL RULES */
+
+    #modal-container {
+        padding: 20px 20px;
+        gap: 10px;
+        width: 90%;
+    }
+
 }

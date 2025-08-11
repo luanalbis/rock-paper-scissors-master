@@ -7,7 +7,7 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="index.css">
-    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <title>Rock, Paper, Scissors</title>
 
   </head>
 
@@ -71,7 +71,18 @@
         <div id="loading-choice-picking-container"></div>
       </div>
     </div>
-    <button type="button" id="btn-rules">RULES</button>
+
+    <label for="btn-close-modal-rules" id="main-modal-rules-container">
+      <div id="modal-container">
+        <div id="txt-rules">
+          <p>RULES</p>
+          <button type="button" onclick="openCloseModalRules('close')" id="btn-close-modal-rules">X</button>
+        </div>
+        <img id="img-modal-rules" src="images/image-rules.svg" alt="">
+      </div>
+    </label>
+
+    <button type="button" id="btn-rules" onclick="openCloseModalRules('open')">RULES</button>
     <button onclick="changeGameMode()" type="button" id="btn-change-mode">CHANGE MODE</button>
     <script src="index.js"></script>
 
