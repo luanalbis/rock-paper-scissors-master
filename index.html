@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="index.css">
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  </head>
+
+  <body>
+    <div id="main-score-container">
+      <div id="all-choices-container">
+        <p>ROCK</p>
+        <p>PAPERS</p>
+        <p>SCISSORS</p>
+      </div>
+      <div id="user-scores-containers">
+        <p>SCORE</p>
+        <h2>0</h2>
+      </div>
+    </div>
+    <div id="main-choices-cantainer">
+      <div id="paper-scissor-container">
+        <button onclick="select('paper')" id="btn-paper" class="circle-btn"><img src="images/icon-paper.svg"
+            alt=""></button>
+
+        <button onclick="select('scissors')" id="btn-scissors" class="circle-btn"><img src="images/icon-scissors.svg"
+            alt=""></button>
+
+      </div>
+      <div id="rock-container">
+        <button onclick="select('rock')" id="btn-rock" class="circle-btn"><img src="images/icon-rock.svg"
+            alt=""></button>
+      </div>
+    </div>
+
+    <div id="main-results-container">
+      <div id="user-choice-container" class="results-container">
+        <p>YOU PICKED</p>
+        <div id="user-choice" style="" class="circle-btn-results btn-scissors-results"><img id="img-user-choice"
+            src="images/icon-scissors.svg" alt=""></div>
+      </div>
+      <div id="inside-results-container">
+        <p id="txt-result">YOU WIN</p>
+        <button id="btn-play-again">PLAY AGAIN</button>
+      </div>
+      <div id="cpu-choice-container" class="results-container">
+        <p>THE HOUSE PICKED</p>
+        <div id="cpu-choice" style="" class="circle-btn-results btn-scissors-results"><img id="img-cpu-choice"
+            src="images/icon-scissors.svg" alt=""></div>
+      </div>
+    </div>
+    </div>
+    <button id="btn-rules">RULES</button>
+    <script src="index.js"></script>
+
+  </body>
+
+</html>
