@@ -12,50 +12,67 @@
   </head>
 
   <body>
+
     <div id="main-score-container">
-      <div id="all-choices-container">
-        <p>ROCK</p>
-        <p>PAPERS</p>
-        <p>SCISSORS</p>
-      </div>
+      <img id="img-logo" src="images/logo.svg" alt="">
       <div id="user-scores-containers">
         <p>SCORE</p>
-        <h2>0</h2>
-      </div>
-    </div>
-    <div id="main-choices-cantainer">
-      <div id="paper-scissor-container">
-        <button onclick="select('paper')" id="btn-paper" class="circle-btn"><img src="images/icon-paper.svg"
-            alt=""></button>
-
-        <button onclick="select('scissors')" id="btn-scissors" class="circle-btn"><img src="images/icon-scissors.svg"
-            alt=""></button>
-
-      </div>
-      <div id="rock-container">
-        <button onclick="select('rock')" id="btn-rock" class="circle-btn"><img src="images/icon-rock.svg"
-            alt=""></button>
+        <h2 id="txt-user-score">0</h2>
       </div>
     </div>
 
+    <div id="main-normal-choices-container">
+
+      <button onclick="play('paper')" id="btn-paper-normal-position" class="circle-btn paper-color"><img
+          src="images/icon-paper.svg" alt=""></button>
+
+      <button onclick="play('scissors')" id="btn-scissors-normal-position" class="circle-btn scissors-color"><img
+          src="images/icon-scissors.svg" alt=""></button>
+
+
+      <button onclick="play('rock')" id="btn-rock-normal-position" class="circle-btn rock-color"><img
+          src="images/icon-rock.svg" alt=""></button>
+
+    </div>
+
+    <div id="main-bonus-choices-container" style="display: none;">
+
+      <button onclick="play('scissors')" id="btn-scissors-bonus-position" class="circle-btn-bonus scissors-color"><img
+          src="images/icon-scissors.svg" alt=""></button>
+
+
+      <button onclick="play('spock')" id="btn-spock-bonus-position" class="circle-btn-bonus spock-color"><img
+          src="images/icon-spock.svg" alt=""></button>
+      <button onclick="play('paper')" id="btn-paper-bonus-position" class="circle-btn-bonus paper-color"><img
+          src="images/icon-paper.svg" alt=""></button>
+
+
+      <button onclick="play('lizard')" id="btn-lizard-bonus-position" class="circle-btn-bonus lizard-color"><img
+          src="images/icon-lizard.svg" alt=""></button>
+
+      <button onclick="play('rock')" id="btn-rock-bonus-position" class="circle-btn-bonus rock-color"><img
+          src="images/icon-rock.svg" alt=""></button>
+
+    </div>
     <div id="main-results-container">
       <div id="user-choice-container" class="results-container">
-        <p>YOU PICKED</p>
-        <div id="user-choice" style="" class="circle-btn-results btn-scissors-results"><img id="img-user-choice"
-            src="images/icon-scissors.svg" alt=""></div>
+        <h2>YOU PICKED</h2>
+        <div id="user-choice" style="" class="circle-btn-results"><img id="img-user-choice" src="" alt=""></div>
       </div>
       <div id="inside-results-container">
-        <p id="txt-result">YOU WIN</p>
-        <button id="btn-play-again">PLAY AGAIN</button>
+        <h1 id="txt-result"></h1>
+        <button onclick="playAgain()" id="btn-play-again">PLAY AGAIN</button>
       </div>
+
       <div id="cpu-choice-container" class="results-container">
-        <p>THE HOUSE PICKED</p>
-        <div id="cpu-choice" style="" class="circle-btn-results btn-scissors-results"><img id="img-cpu-choice"
-            src="images/icon-scissors.svg" alt=""></div>
+        <h2>HOUSE PICKED</h2>
+        <div id="cpu-choice" class="circle-btn-results"><img id="img-cpu-choice" src="" alt="">
+        </div>
+        <div id="loading-choice-picking-container"></div>
       </div>
     </div>
-    </div>
-    <button id="btn-rules">RULES</button>
+    <button type="button" id="btn-rules">RULES</button>
+    <button onclick="changeGameMode()" type="button" id="btn-change-mode">CHANGE MODE</button>
     <script src="index.js"></script>
 
   </body>
