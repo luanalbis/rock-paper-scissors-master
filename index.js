@@ -22,7 +22,6 @@ function play(userOption) {
 
     let userResult = winner[userOption].includes(cpuOption) ? 1 : 0;
     let cpuResult = winner[cpuOption].includes(userOption) ? 1 : 0;
-    console.log(userOption + " - " + cpuOption);
 
     let roundWinner = 'draw';
     if (userResult === 1) roundWinner = 'user';
@@ -30,9 +29,7 @@ function play(userOption) {
 
     let results = { userOption, cpuOption, roundWinner };
 
-
     renderizerResultsPage(results);
-
 }
 
 function renderizerResultsPage(results) {
@@ -95,7 +92,6 @@ function playAgain() {
 function changeGameMode() {
     const resultsContainer = document.getElementById('main-results-container');
     if (window.getComputedStyle(resultsContainer).display !== 'none') return;
-
 
     let logo = document.getElementById('img-logo');
     gameMode = gameMode === 'normal' ? 'bonus' : 'normal';
